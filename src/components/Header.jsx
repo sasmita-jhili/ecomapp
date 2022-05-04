@@ -11,8 +11,7 @@ import {
 import { LinkContainer } from "react-router-bootstrap";
 const Header = () => {
   const cartItems = useSelector((state) => state.addcartReducer.cartData);
-  //commenttttttttttttttttt
-  //cccccccccccccccccccccc
+
   return (
     <>
       <Navbar bg="primary" variant="dark" sticky="top">
