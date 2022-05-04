@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Button, Card, Container, Row, Col, Image } from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
 import Rating from "../components/Rating";
 import {
   addtoCart,
@@ -22,7 +22,11 @@ const CartScreen = () => {
                 <Container key={idx} className="mt-2">
                   <Row>
                     <Col>
-                      <img className="cart-img " src={`${elem.images[0]}`} />
+                      <img
+                        className="cart-img "
+                        alt="product"
+                        src={`${elem.images[0]}`}
+                      />
                     </Col>
                     <Col className="text-center align-self-center">
                       <h4>
