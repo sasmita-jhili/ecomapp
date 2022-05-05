@@ -9,8 +9,8 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="/cart" element={<CartScreen />} />
+        <Route path="/" exact element={<HomeScreen />} />
+        <Route path="/cart" exact element={<CartScreen />} />
       </Routes>
     </>
   );
