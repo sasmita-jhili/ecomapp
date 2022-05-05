@@ -25,16 +25,13 @@ const CartScreen = () => {
                       <img
                         className="cart-img "
                         alt="product"
-                        src={`${elem.images[0]}`}
+                        src={`${elem.image}`}
                       />
                     </Col>
                     <Col className="text-center align-self-center">
-                      <h4>
-                        <strong>{elem.brand}</strong>
-                      </h4>
                       <h6>{elem.title}</h6>
                       <h6>
-                        <Rating value={elem.rating} />
+                        <Rating value={elem.rating.rate} />
                       </h6>
                     </Col>
                     <Col className="text-center align-self-center ">

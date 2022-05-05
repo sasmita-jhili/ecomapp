@@ -28,14 +28,15 @@ const HomeScreen = () => {
               {products.map((product, idx) => (
                 <>
                   {loading && <div className="spinner-border text-primary" />}
-                  <Col key={idx} sm={12} md={6} lg={4} xl={4}>
+                  <Col key={product.id} sm={12} md={6} lg={3} xl={3}>
                     <Card key={product.id} className="my-3 p-3 rounded">
-                      <Card.Img src={`${product.images[0]}`} variant="top" />
+                      <Card.Img src={product.image} variant="top" />
                       <Card.Body>
-                        <Card.Text as="h5">{product.brand}</Card.Text>
-                        <Card.Title as="div">{product.title}</Card.Title>
+                        <Card.Title as="div">
+                          {product.title.slice(0, 20).concat("...")}
+                        </Card.Title>
                         <Card.Text as="h5">
-                          <Rating value={product.rating} />
+                          <Rating value={product.rating.rate} />
                         </Card.Text>
                         <Card.Text as="h5">₹{product.price}</Card.Text>
                         <Button

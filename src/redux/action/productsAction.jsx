@@ -1,11 +1,10 @@
 import axios from "axios";
 export const listProducts = () => async (dispatch) => {
   try {
-    const productData = await axios.get("http://dummyjson.com/products");
-
+    const { data } = await axios.get("https://fakestoreapi.com/products");
     dispatch({
       type: "PRODUCT_LIST_SUCCESS",
-      payload: productData.data.products,
+      payload: data,
     });
   } catch (error) {
     dispatch({
