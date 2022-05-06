@@ -8,10 +8,12 @@ import reportWebVitals from "./reportWebVitals";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 ReactDOM.render(
   <BrowserRouter>
     <Provider store={store}>
+      <ScrollToTop />
       <App />
     </Provider>
   </BrowserRouter>,

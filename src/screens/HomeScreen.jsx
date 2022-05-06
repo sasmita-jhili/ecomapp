@@ -21,7 +21,7 @@ const HomeScreen = () => {
         <h3 className="message">No internet, Can't get data</h3>
       ) : (
         <>
-          <h1>Latest Products</h1>
+          <h1 className="ms-3">Latest Products</h1>
           <Slider />
           <Container className="p-5">
             <Row>
