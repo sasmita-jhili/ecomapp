@@ -12,15 +12,15 @@ import { LinkContainer } from "react-router-bootstrap";
 const Header = () => {
   const cartItems = useSelector((state) => state.addcartReducer.cartData);
 
-  return (
-    <>
-      <Navbar bg="primary" variant="dark" sticky="top">
+  return (    
+      <Navbar bg="primary" variant="dark"  sticky="top" collapseOnSelect expand="sm">
         <Container>
-          <LinkContainer to="/">
-            <Navbar.Brand>My App</Navbar.Brand>
-          </LinkContainer>
+          
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+            <LinkContainer to="/">
+            <Navbar.Brand>My App</Navbar.Brand>
+          </LinkContainer>
             <Nav className="me-auto">
               <LinkContainer to="/home">
                 <Nav.Link>Home</Nav.Link>
@@ -59,8 +59,7 @@ const Header = () => {
             </Nav>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
-    </>
+      </Navbar>   
   );
 };
 

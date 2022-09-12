@@ -15,6 +15,7 @@ export const listProducts = () => async (dispatch) => {
 
 export const addtoCart = (items, product) => async (dispatch) => {
   const cartItems = items.slice();
+  console.log(cartItems);
   let productalreadyincart = false;
   cartItems.forEach((item) => {
     if (item.id === product.id) {

@@ -14,12 +14,6 @@ export const productListReducer = (state = initialState, action) => {
       };
     case "PRODUCT_LIST_FAIL":
       return { loading: true };
-    case "FILTER_PRODUCTS":
-      return {
-        ...state,
-        filteredItem: action.payload.items,
-        search: action.payload.search,
-      };
     default:
       return state;
   }
